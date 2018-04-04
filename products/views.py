@@ -30,3 +30,4 @@ def detail(request, url):
     return render(request, 'product_details.html', locals())
 
 
+

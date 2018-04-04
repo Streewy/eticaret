@@ -92,7 +92,7 @@ Navigation Bar Section
 		  </a>
 		  <div class="nav-collapse">
 			<ul class="nav">
-			  <li class="active"><a href="index.html">Home	</a></li>
+			  <li class=""><a href="/">Home	</a></li>
 			  <li class=""><a href="grid-view.html">Grid View</a></li>
 			  <li class=""><a href="three-col.html">Three Column</a></li>
 			  <li class=""><a href="four-col.html">Four Column</a></li>
@@ -134,7 +134,7 @@ Body Section
 <div class="well well-small">
 	<ul class="nav nav-list">
         {% for i in main_categories %}
-		    <li><ul class="nav nav-list"></ul><span class="icon-chevron-right"></span>{{ i.title }}</a></li>
+		    <li><ul class="nav nav-list"><span class="icon-chevron-right"></span><a href="{% url 'maincategories' i.slug %}">{{ i.title }}</a></ul></li>
                 {% for j in i.main_category.all %}
                     <li class="nav2"><a href={% url 'subcategories' i.slug j.slug %}><strong>{{ j.title }}</strong></a></li>
                 {% endfor %}
