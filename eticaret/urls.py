@@ -21,4 +21,6 @@ from products import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
+    url(r'^(?P<url>[^/]*)/$',views.mainCategory, name ='maincategories'),
+    url(r'^(?P<mainurl>[^/]*)/(?P<suburl>[^/]*)/$',views.subCategory, name ='subcategories'),
 ]
